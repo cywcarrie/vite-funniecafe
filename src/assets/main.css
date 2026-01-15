@@ -1,0 +1,158 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #6c584c;
+  --color-secondary: #a98467;
+  --color-espresso: #463b35;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+  }
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    @apply bg-white leading-relaxed dark:bg-gray-900 transition-colors duration-300;
+  }
+  a {
+    @apply no-underline;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    background-color: var(--color-primary);
+    padding-inline: var(--spacing-5);
+    padding-block: var(--spacing-2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  .btn-secondary {
+    background-color: var(--color-secondary);
+    padding-inline: var(--spacing-5);
+    padding-block: var(--spacing-2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  .btn-outline-primary {
+    border: 1px solid var(--color-primary);
+    background-color: transparent;
+    padding-inline: var(--spacing-5);
+    padding-block: var(--spacing-2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+  .btn-outline-secondary {
+    border: 2px solid var(--color-secondary);
+    background-color: transparent;
+    padding-inline: var(--spacing-5);
+    padding-block: var(--spacing-2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-secondary);
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+  @media (hover: hover) {
+    .btn-primary:hover {
+      background-color: #594836;
+    }
+    .btn-secondary:hover {
+      background-color: #8c6c4f;
+    }
+    .btn-outline-primary:hover {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+    }
+    .btn-outline-secondary:hover {
+      background-color: var(--color-secondary);
+      color: var(--color-white);
+    }
+  }
+  .btn-primary:disabled,
+  .btn-secondary:disabled,
+  .btn-outline-primary:disabled,
+  .btn-outline-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  .form-control {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-md bg-white 
+           focus:outline-none focus:ring-2 
+           focus:ring-primary
+           transition duration-150 ease-in-out dark:bg-gray-800 dark:text-white;
+  }
+  .form-control:disabled {
+    @apply bg-gray-100 cursor-not-allowed opacity-70;
+  }
+  .home {
+    @apply w-full h-screen bg-cover bg-center bg-no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('images/home-bg.jpg');
+  }
+  .banner {
+    @apply w-full bg-cover bg-center bg-no-repeat;
+  }
+  .banner1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url('images/banner1.jpeg');
+    }
+  .banner2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+      url('images/banner2.jpeg');
+  }
+  .banner-title {
+    @apply top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+  .cart-list-content {
+    @apply hidden;
+  }
+  .cart-list:hover .cart-list-content {
+    @apply block;
+  }
+  .pay-header {
+    @apply text-center font-bold text-secondary dark:text-primary text-sm md:text-base;
+  }
+  .pay-header.active {
+    @apply text-base md:text-[20px] text-primary dark:text-secondary;
+  }
+  .normal-input.error input {
+    @apply border border-red-600;
+  }
+  .normal-input.error .error-text {
+    @apply opacity-100 mt-0 text-sm text-red-600 dark:text-red-400;
+  }
+  .top {
+    @apply fixed bottom-4 right-4 z-50 shadow-md opacity-90;
+    @apply md:bottom-7 md:right-7;
+  }
+  .nav-link {
+    @apply font-bold rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900;
+  }
+  .nav-link-active {
+    @apply bg-gray-200 text-gray-900;
+  }
+  .mobile-nav-link {
+    @apply block px-3 py-2 text-gray-700 font-bold hover:bg-gray-100 hover:text-gray-900 rounded;
+  }
+}
