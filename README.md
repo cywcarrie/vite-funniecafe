@@ -2,7 +2,7 @@
 
 ## Introduction - Read this in Chinese : [繁體中文](README.zh_TW.md)
 
-### Demo Website : [Link]
+### Demo Website : [Link](https://cywcarrie.github.io/vite-funniecafe/#/)
 
 In this fully English e-commerce website simulation, users can browse and search for products using keywords, view detailed product information, and manage their shopping cart by adding or removing items. They can also place orders with ease. To enhance user experience, the site offers both light and dark themes, allowing for a more comfortable and personalized browsing environment. The backend allows administrator to add and modify products and coupons.
 
@@ -32,19 +32,6 @@ Vue.js, Vite, Pinia, ESLint, Tailwind CSS
   - Product management：Manage product functionalities by adding, removing, and modifying items
   - Order management： View order details
   - Coupon management：Manage coupon functions by adding, removing, and modifying coupons
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
 
 ## Project Setup
 
