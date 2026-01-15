@@ -1,0 +1,1 @@
+import{e as a,J as c,q as n,o as t}from"./index-BrREbNrm.js";const l={__name:"VueLoading",setup(s){const e=a(!1);return(r,i)=>{const o=c("LoadingVue");return t(),n(o,{active:e.value,loader:"bars",color:"#6c584c",width:70,height:70,opacity:.7},null,8,["active"])}}};export{l as _};
